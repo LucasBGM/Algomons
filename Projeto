@@ -1,0 +1,78 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <ctype.h>
+#define VERT -1
+#define HORIZON -2
+#define CIDADE 5
+#define CIDPASS 6
+#define Z 2
+#define X 3
+#define R 4
+#define Y 1
+#define COL 23
+#define LIN 8
+
+//Variável global
+int lAtual = 3, cAtual = 6;
+
+typedef struct{
+  	char nome[50];
+  	int atk;
+  	int vida;
+  	char tipo;
+  	int posL;
+  	int posC;
+} Algomon;
+
+
+int numeroAlgo = 0, insig = 0;
+
+void movimentacao (int matriz[LIN][COL]){
+int movimento, l, c;
+
+scanf("%c", &movimento);
+if(movimento == "w" || movimento == "W"){
+  matriz[lAtual][cAtual]= cAtual-2;
+}
+}
+
+
+
+void desenhamapa (char matriz[LIN][COL]){
+  	int i, j;
+  	for(i=0; i<LIN; i++){ 
+      printf("         ");
+    for(j=0; j<COL; j++){
+      printf("%c", matriz[i][j]);
+      }
+      printf("\n");
+      }
+  printf("\n");
+  printf("Algodex (%d/15) Algomons: %d Insignias: %d\n", numeroAlgo, numeroAlgo, insig);
+ 
+
+  printf("Qual seu movimento (wasdrf)?");
+  };
+
+int main(){
+   printf("+----------------ALGOMOM--------------+\n");
+    char map[LIN][COL]={
+        {"$     #                "},
+        {"|     |     #-----#    "},
+        {"|     |     |     |    "},
+        {"#-----X-----#-----#---%"},
+        {"      |               |"},
+        {"      |   #-----------#"},
+        {"      |   |            "},
+        {"&-----#---#-----#-----@"},
+};
+
+	
+    
+    desenhamapa(map);
+  printf("\n");
+    printf("+----------------ALGOMOM--------------+");
+    
+	return 0;
+}
